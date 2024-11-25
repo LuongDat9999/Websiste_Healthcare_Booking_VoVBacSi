@@ -77,12 +77,24 @@
       "PackagePath": "staticwebassets/Uploads/bg_dn.jpg"
     },
     {
+      "Id": "/Users/luongdat/DAPM-BSVOV/wwwroot/Uploads/chuyen-khoa-tim-mach.jpg",
+      "PackagePath": "staticwebassets/Uploads/chuyen-khoa-tim-mach.jpg"
+    },
+    {
+      "Id": "/Users/luongdat/DAPM-BSVOV/wwwroot/Uploads/hoi-suc-cap-cuu-1.jpg",
+      "PackagePath": "staticwebassets/Uploads/hoi-suc-cap-cuu-1.jpg"
+    },
+    {
       "Id": "/Users/luongdat/DAPM-BSVOV/wwwroot/Uploads/ic-fb.png",
       "PackagePath": "staticwebassets/Uploads/ic-fb.png"
     },
     {
       "Id": "/Users/luongdat/DAPM-BSVOV/wwwroot/Uploads/ic-ytb 2.png",
       "PackagePath": "staticwebassets/Uploads/ic-ytb 2.png"
+    },
+    {
+      "Id": "/Users/luongdat/DAPM-BSVOV/wwwroot/Uploads/images.png",
+      "PackagePath": "staticwebassets/Uploads/images.png"
     },
     {
       "Id": "/Users/luongdat/DAPM-BSVOV/wwwroot/Uploads/info-doc.JPG",
@@ -103,6 +115,10 @@
     {
       "Id": "/Users/luongdat/DAPM-BSVOV/wwwroot/Uploads/raccoon_o.jpeg",
       "PackagePath": "staticwebassets/Uploads/raccoon_o.jpeg"
+    },
+    {
+      "Id": "/Users/luongdat/DAPM-BSVOV/wwwroot/Uploads/sieu-am-tuyen-giap.jpg",
+      "PackagePath": "staticwebassets/Uploads/sieu-am-tuyen-giap.jpg"
     },
     {
       "Id": "/Users/luongdat/DAPM-BSVOV/wwwroot/Uploads/trolybacsi2.jpg",
