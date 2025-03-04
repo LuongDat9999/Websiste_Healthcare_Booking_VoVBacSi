@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/luongdat/DAPM-BSVOV/DoAnCNPM.csproj": {}
+    "/Users/luongdat/Documents/Đồ án tổng hợp/DAPM-BSVOV/DoAnCNPM.csproj": {}
   },
   "projects": {
-    "/Users/luongdat/DAPM-BSVOV/DoAnCNPM.csproj": {
+    "/Users/luongdat/Documents/Đồ án tổng hợp/DAPM-BSVOV/DoAnCNPM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/luongdat/DAPM-BSVOV/DoAnCNPM.csproj",
+        "projectUniqueName": "/Users/luongdat/Documents/Đồ án tổng hợp/DAPM-BSVOV/DoAnCNPM.csproj",
         "projectName": "DoAnCNPM",
-        "projectPath": "/Users/luongdat/DAPM-BSVOV/DoAnCNPM.csproj",
+        "projectPath": "/Users/luongdat/Documents/Đồ án tổng hợp/DAPM-BSVOV/DoAnCNPM.csproj",
         "packagesPath": "/Users/luongdat/.nuget/packages/",
-        "outputPath": "/Users/luongdat/DAPM-BSVOV/obj/",
+        "outputPath": "/Users/luongdat/Documents/Đồ án tổng hợp/DAPM-BSVOV/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/luongdat/.nuget/NuGet/NuGet.Config"

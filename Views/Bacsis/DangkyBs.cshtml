@@ -315,6 +315,68 @@ Tôi đã đọc và đồng ý với tất cả các điều khoản và điề
         </form>
     </div>
 <script>
+     // Hàm thiết lập xem trước ảnh
+function setupImagePreview(inputId, previewId) {
+    const fileInput = document.getElementById(inputId);
+    const previewImage = document.getElementById(previewId);
+
+    fileInput.addEventListener("change", function () {
+        const file = fileInput.files[0]; // Lấy file đã chọn
+
+        if (file) {
+            const reader = new FileReader();
+
+            // Khi file được đọc xong, hiển thị ảnh
+            reader.onload = function (e) {
+                previewImage.src = e.target.result; // Gán URL ảnh
+                previewImage.style.display = "block"; // Hiển thị ảnh
+            };
+
+            reader.readAsDataURL(file); // Đọc file dưới dạng URL
+        } else {
+            // Nếu không có ảnh, ẩn ảnh xem trước
+            previewImage.src = "";
+            previewImage.style.display = "none";
+        }
+    });
+}
+
+// Sử dụng setupImagePreview cho từng trường input file
+setupImagePreview("hinhanh", "preview"); // Xem trước ảnh đại diện
+setupImagePreview("cmt-image-front", "preview-front"); // Xem trước ảnh CMT mặt trước
+setupImagePreview("cmtimageback", "preview-back"); // Xem trước ảnh CMT mặt sau
+setupImagePreview("anhChungChi1", "preview1"); // Xem trước ảnh chứng chỉ 1
+setupImagePreview("anhChungChi2", "preview2"); // Xem trước ảnh chứng chỉ 2
+
+const passwordInput = document.getElementById("password");
+    const confirmPasswordInput = document.getElementById("confirm-password");
+    const passwordError = document.getElementById("password-error");
+    const confirmPasswordError = document.getElementById("confirm-password-error");
+
+    // Kiểm tra mật khẩu khi gõ
+    passwordInput.addEventListener("input", function () {
+        const password = passwordInput.value;
+        const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+        if (!passwordRegex.test(password)) {
+            passwordError.textContent = "Mật khẩu phải gồm ít nhất 8 ký tự, bao gồm cả chữ và số.";
+        } else {
+            passwordError.textContent = "";
+        }
+    });
+
+    // Kiểm tra mật khẩu nhập lại khi gõ
+    confirmPasswordInput.addEventListener("input", function () {
+        const password = passwordInput.value;
+        const confirmPassword = confirmPasswordInput.value;
+
+        if (confirmPassword !== password) {
+            confirmPasswordError.textContent = "Mật khẩu nhập lại không khớp.";
+        } else {
+            confirmPasswordError.textContent = "";
+        }
+    });
+
     // Lấy các phần tử modal và các nút
 const modal = document.getElementById("modalTerms");
 const closeModal = document.getElementById("closeModal");
@@ -358,68 +420,9 @@ window.addEventListener("click", function(event) {
         // Nếu muốn ngừng việc gửi form, bạn có thể thêm dòng này
         event.preventDefault();
     }
-    // Hàm thiết lập xem trước ảnh
-function setupImagePreview(inputId, previewId) {
-    const fileInput = document.getElementById(inputId);
-    const previewImage = document.getElementById(previewId);
+   
 
-    fileInput.addEventListener("change", function () {
-        const file = fileInput.files[0]; // Lấy file đã chọn
-
-        if (file) {
-            const reader = new FileReader();
-
-            // Khi file được đọc xong, hiển thị ảnh
-            reader.onload = function (e) {
-                previewImage.src = e.target.result; // Gán URL ảnh
-                previewImage.style.display = "block"; // Hiển thị ảnh
-            };
-
-            reader.readAsDataURL(file); // Đọc file dưới dạng URL
-        } else {
-            // Nếu không có ảnh, ẩn ảnh xem trước
-            previewImage.src = "";
-            previewImage.style.display = "none";
-        }
-    });
-}
-
-// Sử dụng setupImagePreview cho từng trường input file
-setupImagePreview("hinhanh", "preview"); // Xem trước ảnh đại diện
-setupImagePreview("cmt-image-front", "preview-front"); // Xem trước ảnh CMT mặt trước
-setupImagePreview("cmtimageback", "preview-back"); // Xem trước ảnh CMT mặt sau
-setupImagePreview("anhChungChi1", "preview1"); // Xem trước ảnh chứng chỉ 1
-setupImagePreview("anhChungChi2", "preview2"); // Xem trước ảnh chứng chỉ 2
-
-    const passwordInput = document.getElementById("password");
-    const confirmPasswordInput = document.getElementById("confirm-password");
-    const passwordError = document.getElementById("password-error");
-    const confirmPasswordError = document.getElementById("confirm-password-error");
-
-    // Kiểm tra mật khẩu khi gõ
-    passwordInput.addEventListener("input", function () {
-        const password = passwordInput.value;
-        const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-
-        if (!passwordRegex.test(password)) {
-            passwordError.textContent = "Mật khẩu phải gồm ít nhất 8 ký tự, bao gồm cả chữ và số.";
-        } else {
-            passwordError.textContent = "";
-        }
-    });
-
-    // Kiểm tra mật khẩu nhập lại khi gõ
-    confirmPasswordInput.addEventListener("input", function () {
-        const password = passwordInput.value;
-        const confirmPassword = confirmPasswordInput.value;
-
-        if (confirmPassword !== password) {
-            confirmPasswordError.textContent = "Mật khẩu nhập lại không khớp.";
-        } else {
-            confirmPasswordError.textContent = "";
-        }
-    });
-
+    
     // Kiểm tra lần cuối khi submit
     document.getElementById("passwordForm").addEventListener("submit", function (event) {
         const password = passwordInput.value;

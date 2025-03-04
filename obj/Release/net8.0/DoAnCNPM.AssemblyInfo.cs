@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DoAnCNPM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+becb223c1a954eff48bf56dda8f7edecb5b6ccc6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+089243b3716d70739ae5917802d6067eb8b8bd9c")]
 [assembly: System.Reflection.AssemblyProductAttribute("DoAnCNPM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DoAnCNPM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
